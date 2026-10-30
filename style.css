@@ -1,0 +1,88 @@
+/* North Cedar Software — shared design system */
+:root{
+  --cream:#faf6ee; --cream2:#f3ecdc; --ink:#1d2620; --muted:#5c665e;
+  --cedar:#14532d; --cedar2:#1d7a44; --cedar-soft:#e3efe2; --card:#ffffff;
+  --line:#e6dfcc; --radius:20px; --shadow:0 10px 30px rgba(20,60,35,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+a{color:var(--cedar2)}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+/* header */
+header.site{position:sticky;top:0;z-index:10;background:rgba(250,246,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:18px}
+.brand svg{width:30px;height:30px}
+.nav nav a{margin-left:22px;text-decoration:none;color:var(--ink);font-weight:600;font-size:15px}
+.nav nav a:hover{color:var(--cedar2)}
+/* hero */
+.hero{text-align:center;padding:72px 0 0;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(34px,5.5vw,56px);line-height:1.12;margin:14px 0 12px;letter-spacing:-.01em}
+.hero p.lede{font-size:clamp(17px,2.4vw,21px);color:var(--muted);max-width:640px;margin:0 auto 26px}
+.eyebrow{display:inline-block;background:var(--cedar-soft);color:var(--cedar);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--cedar2),var(--cedar));color:#fff;text-decoration:none;font-weight:700;padding:13px 26px;border-radius:999px;box-shadow:var(--shadow);margin:4px}
+.btn.ghost{background:#fff;color:var(--cedar);border:1.5px solid var(--cedar)}
+.btn.disabled{opacity:.55;pointer-events:none}
+.forest{display:block;width:100%;height:110px;margin-top:48px}
+/* sections */
+section{padding:64px 0}
+section h2{font-size:clamp(26px,4vw,36px);text-align:center;margin:0 0 8px}
+section .sub{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 36px}
+/* app grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.app-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px;text-decoration:none;color:var(--ink);transition:transform .15s ease}
+.app-card:hover{transform:translateY(-4px)}
+.app-card .icon{width:84px;height:84px;border-radius:20px;box-shadow:var(--shadow)}
+.app-card h3{margin:4px 0 0;font-size:24px}
+.app-card p{color:var(--muted);margin:0;flex:1}
+.app-card .go{font-weight:700;color:var(--cedar2)}
+.app-card.soon{opacity:.75;border-style:dashed;align-items:flex-start;justify-content:center}
+.tag{display:inline-block;background:var(--cream2);border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600;color:var(--muted)}
+/* app page */
+.app-hero{text-align:center;padding:56px 0 8px}
+.app-hero .icon{width:120px;height:120px;border-radius:28px;box-shadow:var(--shadow)}
+.app-hero h1{font-size:clamp(32px,5vw,48px);margin:16px 0 6px}
+.app-hero .lede{color:var(--muted);font-size:19px;max-width:600px;margin:0 auto 22px}
+.phone-stage{display:flex;justify-content:center;padding:26px 0 6px}
+.phone{width:270px;height:550px;background:#101613;border-radius:44px;padding:12px;box-shadow:0 30px 60px rgba(20,60,35,.25);transform:rotate(-2deg)}
+.phone .screen{background:#fbfaf7;border-radius:34px;height:100%;overflow:hidden;padding:18px 16px;font-size:13px}
+.phone .bar{background:var(--cedar);color:#fff;border-radius:12px;padding:10px 12px;font-weight:700}
+.phone .row{display:flex;justify-content:space-between;border-bottom:1px solid #eee;padding:9px 2px}
+.pill{display:inline-block;border-radius:999px;padding:2px 10px;font-size:11px;font-weight:700}
+.pill.paid{background:#dff3e2;color:var(--cedar)}
+.pill.due{background:#fdeeda;color:#8a5a00}
+.paid-card{background:#fff;border:1px solid var(--line);border-left:5px solid var(--cedar2);border-radius:14px;box-shadow:var(--shadow);padding:12px 16px;margin-top:14px;text-align:left}
+/* features */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.feature{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.feature .fi{width:46px;height:46px;border-radius:13px;background:var(--cedar-soft);display:flex;align-items:center;justify-content:center;font-size:22px}
+.feature h3{margin:12px 0 6px;font-size:19px}
+.feature p{margin:0;color:var(--muted)}
+/* real screenshots */
+.phone img.shot{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:34px;display:block}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;max-width:900px;margin:0 auto}
+.shot-card{text-align:center}
+.shot-card .frame{background:#101613;border-radius:38px;padding:10px;box-shadow:0 22px 44px rgba(20,60,35,.20)}
+.shot-card img{width:100%;border-radius:30px;display:block}
+.shot-card h3{margin:14px 0 4px;font-size:18px}
+.shot-card p{margin:0;color:var(--muted);font-size:15px}
+/* who */
+.who{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.who span{background:var(--cedar-soft);color:var(--cedar);font-weight:700;border-radius:999px;padding:10px 22px;font-size:16px}
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:10px 0}
+summary{font-weight:700;cursor:pointer}
+details p{color:var(--muted);margin:8px 0 0}
+/* band + footer */
+.band{background:var(--cedar);color:#eaf5ec;text-align:center;padding:26px 20px;border-radius:var(--radius);max-width:1080px;margin:0 auto}
+.band a{color:#fff;font-weight:700}
+footer.site{background:var(--cedar);color:#dcefe0;margin-top:72px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:26px;padding:44px 0 10px}
+.foot h4{margin:0 0 10px;color:#fff}
+.foot a{color:#cfe6d4;text-decoration:none;display:block;margin:5px 0;font-size:15px}
+.foot a:hover{text-decoration:underline}
+.foot .fine{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.25);padding:14px 0 22px;font-size:13.5px;color:#bcd8c2}
+@media (max-width:640px){.foot{grid-template-columns:1fr}.nav nav a{margin-left:14px}}
